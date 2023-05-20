@@ -11,7 +11,7 @@ const Home = {
           </h1>
           <div class="list-resto" id="list"></div>
         </div>
-      </section>
+    </section>
     `
   },
 

@@ -13,19 +13,10 @@
   .menu_toggle {
     display: none;
   }
+  .detail h1{
+    font-size: 22px;
+  }
 }
-
-/* @media screen and (min-width: 650px) {
-  .resto-item-content {
-    padding: 16px 32px 32px 32px;
-  }
-  .resto-item-title {
-    font-size: 18px;
-  }
-  .list-item-description {
-    font-size: 14px;
-  }
-} */
 
 @media screen and (min-width: 700px) {
   .list-resto {
@@ -43,6 +34,7 @@
     grid-column-gap: 26px;
     grid-row-gap: 26px;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
