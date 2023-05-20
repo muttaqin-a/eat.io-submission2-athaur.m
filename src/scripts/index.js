@@ -1,7 +1,13 @@
-import 'regenerator-runtime' /* for async await transpile */
+import 'regenerator-runtime'
 import '../styles/main.css'
 import '../styles/responsive.css'
+import '../styles/detail.css'
 import App from './views/app'
+import swRegister from './utils/sw-register'
+
+import './component/app-bar'
+import './component/app-hero'
+import './component/app-footer'
 
 const app = new App({
   button: document.querySelector('#menu_toggle'),
@@ -15,4 +21,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage()
+  swRegister()
 })

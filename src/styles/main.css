@@ -82,13 +82,14 @@ html {
   border-radius: 15px;
   text-decoration: none;
   padding: 10px 20px;
+  transition: 0.5s;
 }
 
 .about-us a:hover {
   text-decoration: none;
   background-color: #b6a42e;
   color: black;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .hero {
@@ -159,7 +160,7 @@ main {
 .city {
   position: absolute;
   background-color: #c36a2d;
-  border-radius: 5px 5px 0 5px;
+  border-radius: 0 5px 0 5px;
   padding: 10px 15px;
   color: white;
   top: 0;
@@ -172,7 +173,7 @@ main {
 }
 
 .rating {
-  font-size: 14px;
+  font-size: 16px;
   color: #c36a2d;
   font-weight: bold;
 }
@@ -184,24 +185,25 @@ main {
 .resto-item-title {
   font-weight: 500;
   margin-top: 16px;
-  transition: 0.3s opacity;
-}
-
-.resto-item-title:hover {
-  opacity: 0.5;
 }
 
 .resto-item-title a {
   text-decoration: none;
-  font-size: 1.15em;
-  padding: 10px 0;
+  font-size: 24px;
   color: black;
 }
 
 .resto-item-description {
-  margin-top: -30px;
+  margin-top: -40px;
   font-size: 14px;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
   line-height: 1.5em;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
 }
 
 footer {
@@ -226,4 +228,68 @@ footer {
 }
 .skip-link:focus {
   top: 100px;
+}
+
+.btn-detail {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #c36a2d;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2.1px solid #ffffff;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.btn-detail:hover {
+  min-width: 44px;
+  min-height: 44px;
+  background-color: #ffffff;
+  color: #ac5900;
+  transition: 0.5s;
+  border: 2.1px solid #ac5900;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-detail a {
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  color: white;
+  text-decoration: none;
+  background-color: #ac5900;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.page-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px solid #dadada;
+  border-top-color: #C36A2D;
+  z-index: 99;
+  animation: spin 10s linear infinite;
+}
+
+
+.btn-loader {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 5px solid #dadada;
+  border-top-color: #C36A2D;
+  animation: spin 1s linear infinite;
 }

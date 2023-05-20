@@ -4,61 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c36a2d"/>
+
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="./app.webmanifest">
+    <link rel="icon" href="../sc-icon.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"> 
     <title>eat.io</title>
-    <link rel="icon" href="images/app-logo.png"/>
   </head>
   <body>
-    <a href="#content" class="skip-link">Menuju ke konten</a>
+    <a href="#mainContent" class="skip-link" tabindex="0">Menuju ke konten</a>
 
     <!-- navbar -->
+    <app-bar></app-bar>
 
-    <header class="header">
-      <div class="appbar">
-        <div class="header_logo">
-          <img src="images/app-logo.png" alt="" />
-        </div>
-        <button id="menu_toggle" class="menu_toggle" tabindex="0">☰</button>
-      </div>
-
-      <nav id="drawer" class="header-nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#/home">Home</a></li>
-          <li class="nav-item"><a href="#/fav">Favorites</a></li>
-          <li class="nav-item about-us">
-            <a href="https://www.instagram.com/a.rmt___/" target="_blank">About Us</a>
-          </li>
-        </ul>
-      </nav>
-    </header> 
     <!-- Jumbotron -->
-
-    <div class="hero">
-      <div class="hero-inner">
-        <h1 class="hero-title">eat.io</h1>
-        <p class="hero-tagline">Find the best restaurant in your area</p>
-      </div>
-    </div>
+    <app-hero></app-hero>
 
     <!-- konten -->
 
-    <main id="mainContent"></main>
-
-    <!-- <main>
-      <section class="content" id="content">
-        <div class="resto">
-          <h1>
-            <span class="content-title">Explore Restaurant</span>
-          </h1>
-          <div class="list-resto" id="list"></div>
-        </div>
-      </section>
-    </main> -->
+    <main id="mainContent" tabindex="0"></main>
 
     <!-- footer -->
-
-    <footer>
-      <p>Copyright &copy; 2023 - eat.io</p>
-    </footer> 
+    <app-footer></app-footer>
+    
   </body>
 </html>
+
